@@ -115,6 +115,7 @@ plot_hyper_rebuild <- function(.dat, size_shift = TRUE, shift_val = 3){
   
   .dat$Metric <- gsub("Symm MAE Percent", "Symm MAE\\\nPercent", .dat$Metric)
   .dat$Metric <- gsub("Class Error", "Class\\\nError", .dat$Metric)
+  .dat$Metric <- gsub("Median AE", "Mean AE", .dat$Metric)
   
   if(length(grep("layer_count", .dat$hyper))>0){
     # levels_temp <- as.character(levels(.dat$hyper))
